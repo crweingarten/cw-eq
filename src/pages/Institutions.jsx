@@ -1,7 +1,6 @@
 import React from 'react'
 import BankList from './BankList'
 
-
 class Institutions extends React.Component {
 
 state = {
@@ -23,7 +22,9 @@ fetch(`https://banks.data.fdic.gov/api/institutions?filters=NAME%3A%2A${input}%2
 }
 
 getFavs(){
-if (localStorage.fav === "" || (!localStorage.fav)){this.getBanks("")}
+if (localStorage.fav === "" || (!localStorage.fav)){  
+  this.setState({favList: []})
+  this.getBanks("")}
 else{
 const newFavList = localStorage.fav.split(",")
 const newFavQuery = (localStorage.fav.replace(/,/g, "%2C%20"))

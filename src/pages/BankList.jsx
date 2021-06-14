@@ -50,9 +50,3 @@ export default function BankList(props){
   }
     </ModalFooter></Modal>
     </React.Fragment>)}
-  
-
-  
-       
- 
- 
